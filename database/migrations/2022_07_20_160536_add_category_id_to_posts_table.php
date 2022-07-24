@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddImageColumnToFirstsTable extends Migration
+class AddCategoryIdToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddImageColumnToFirstsTable extends Migration
      */
     public function up()
     {
-        Schema::table('firsts', function (Blueprint $table) {
-            $table->string('image', 100)->nullable();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->integer('category_id')->unsigned();    //unsigned()型で定義
+            //'category_id' は 'categoriesテーブル' の 'id' を参照する外部キーです
         });
     }
 
@@ -25,7 +26,7 @@ class AddImageColumnToFirstsTable extends Migration
      */
     public function down()
     {
-        Schema::table('firsts', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             //
         });
     }
