@@ -22,4 +22,9 @@ Route::put('/posts/{post}', 'PostController@update');
 Route::delete('/posts/{post}', 'PostController@delete');
 Route::post('/posts', 'PostController@store');
 Route::get('/categories/{category}', 'CategoryController@index');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 ?>

@@ -7,6 +7,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        @extends('layouts.app')　　　　　　　　　　　　　　　　　　
+
+        @section('content')
         <h1>Blog Name</h1>
         <p class="edit">
             [<a href="/posts/{{ $post->id }}/edit">edit</a>]
@@ -35,5 +38,6 @@
             }
         }
         </script>
+        @endsection
     </body>
 </html>

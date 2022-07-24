@@ -7,6 +7,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+        @extends('layouts.app')　　　　　　　　　　　　　　　　　　
+
+        @section('content')
         <h1>Blog Name</h1>
         <a href='/posts/create'>create</a>
         <div class='posts'>
@@ -26,5 +29,6 @@
         <div class='back'>
             <a href='/'>back</a>
         </div>
+        @endsection
     </body>
 </html>
